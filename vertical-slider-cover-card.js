@@ -8,11 +8,10 @@
 
 console.info("%c [konnected.vn] Vertical Slider Cover Card  \n%c Version v0.1.2","color: red; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
 
-import {
-    LitElement,
-    html,
-    css
-} from "https://unpkg.com/lit-element@2.0.1/lit-element.js?module";
+const LitElement = Object.getPrototypeOf(customElements.get("ha-panel-lovelace"));
+const html = LitElement.prototype.html;
+const css = LitElement.prototype.css;
+
 class VerticalSliderCoverCard extends LitElement {
   
   static get properties() {
